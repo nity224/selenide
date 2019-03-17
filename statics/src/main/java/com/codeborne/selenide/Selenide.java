@@ -1,6 +1,7 @@
 package com.codeborne.selenide;
 
 import com.codeborne.selenide.ex.DialogTextMismatch;
+import org.openqa.selenium.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -37,6 +38,10 @@ public class Selenide {
    */
   public static void open(String relativeOrAbsoluteUrl) {
     getSelenideDriver().open(relativeOrAbsoluteUrl);
+  }
+  
+  public static String getCurrentUrl() {
+    return webdriverContainer.getWebDriver().getCurrentUrl();
   }
 
   /**
