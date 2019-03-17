@@ -41,7 +41,7 @@ public class Selenide {
   }
   
   public static String getCurrentUrl() {
-    return webdriverContainer.getWebDriver().getCurrentUrl();
+    return WebDriverRunner.webdriverContainer.getWebDriver().getCurrentUrl();
   }
 
   /**
